@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Background matches the landing page main color as requested -->
+  <rect width="400" height="120" fill="#08132a"/>
+  
+  <!-- Geometric 'EP' Shield/Mark -->
+  <g transform="translate(40, 30)">
+    <path d="M0 5C0 2.23858 2.23858 0 5 0H55C57.7614 0 60 2.23858 60 5V35C60 51.5685 46.5685 65 30 65C13.4315 65 0 51.5685 0 35V5Z" fill="white" fill-opacity="0.1"/>
+    <path d="M15 15H45V22H22V28H40V35H22V45H45V52H15V15Z" fill="white"/>
+    <path d="M48 15C52 15 55 18 55 22V35C55 48.8071 43.8071 60 30 60C16.1929 60 5 48.8071 5 35V15H12V35C12 44.9411 20.0589 53 30 53C39.9411 53 48 44.9411 48 35V15Z" fill="url(#silver_gradient)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="120" y="72" font-family="Montserrat, sans-serif" font-weight="700" font-size="36" letter-spacing="0.05em" fill="white">EQUITAS</text>
+  <text x="120" y="102" font-family="Montserrat, sans-serif" font-weight="300" font-size="24" letter-spacing="0.15em" fill="white" fill-opacity="0.8">PRIVATE</text>
+
+  <!-- Definitions for the silver effect -->
+  <defs>
+    <linearGradient id="silver_gradient" x1="5" y1="15" x2="55" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#C0C0C0"/>
+      <stop offset="100%" stop-color="#E0E0E0"/>
+    </linearGradient>
+  </defs>
+</svg>
