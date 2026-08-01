@@ -46,6 +46,11 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [x] Imported the generated design into Figma.
 - [x] Used the Figma file as the primary design reference.
 - [x] Exported and optimized all required assets from Figma.
+- [x] Set up the project's design system with CSS variables.
+- [x] Defined reusable design tokens (colors, typography, spacing, layout, and border radius).
+- [x] Built the semantic HTML structure for the navigation.
+- [x] Styled the navigation using modern CSS and Flexbox.
+- [x] Implemented the initial navigation styling and interactions.
 
 - [ ] Build the website structure with semantic HTML.
 - [ ] Style the website using modern CSS.
