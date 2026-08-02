@@ -65,6 +65,8 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [x] Completed Hero section (HTML & CSS) with BEM.
 - [x] Built Features section HTML with BEM.
 - [x] Improved buttons and accessibility.
+- [x] Completed Features section CSS
+- [x] Completed Trust section HTML & CSS
 
 - [ ] Build the rest of website structure with semantic HTML.
 - [ ] Style the rest of website using modern CSS.
