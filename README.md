@@ -67,6 +67,9 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [x] Improved buttons and accessibility.
 - [x] Completed Features section CSS
 - [x] Completed Trust section HTML & CSS
+- [x] At this stage, I’m adapting the completed sections for mobile first to make the responsive implementation more manageable.
+
+  -[ ]The existing desktop styles are being preserved and will be refined after the mobile layout is established.
 
 - [ ] Build the rest of website structure with semantic HTML.
 - [ ] Style the rest of website using modern CSS.
