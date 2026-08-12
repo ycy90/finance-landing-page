@@ -9,6 +9,9 @@
       type="image/svg+xml"
       href="./assets/icons/coins.svg?v=12345"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -61,7 +64,7 @@
       <section class="hero">
         <div class="hero__container container">
           <div class="hero__content">
-            <p class="hero__eyebrow">Institutional Grade Excellence</p>
+            <p class="hero__kicker">Institutional Grade Excellence</p>
             <h1 class="hero__title">
               Elevate Your Wealth with
               <span class="hero__accent">Intelligence</span>
@@ -95,7 +98,7 @@
             </div>
           </div>
 
-          <picture class="hero__image-container">
+          <picture class="hero__media">
             <source
               srcset="
                 ./assets/images/hero-tablet.webp  406w,
@@ -237,7 +240,7 @@
 
           <div class="trust__content">
             <div class="trust__main-content">
-              <p class="trust__eyebrow">Established Reliability</p>
+              <p class="trust__kicker">Established Reliability</p>
               <h2 class="trust__heading">Our Legacy of Excellence</h2>
               <p class="trust__description">
                 For over a decade, Equitas has stood as a bastion of private
@@ -323,6 +326,109 @@
             </article>
           </div>
         </div>
+      </section>
+      <section class="subscription">
+        <picture class="subscription__media">
+            <source
+              srcset="
+                ./assets/images/signup-tablet.webp  406w,
+                ./assets/images/signup-desktop.webp 789w
+              "
+              sizes="(max-width: 767px) 100vw, 50vw"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/signup-tablet.jpeg  406w,
+                ./assets/images/signup-desktop.jpeg 789w
+              "
+              sizes="(max-width: 767px) 100vw, 50vw"
+              type="image/jpeg"
+            />
+            <img
+              src="./assets/images/signup-desktop.jpg"
+              alt="Charts"
+              decoding="async"
+              class="subscription__image"
+            />
+          </picture>
+
+   <div class="subscription__container container">     
+<div class="subscription__content">
+  <h4 class="subscription__heading">Join Equitas</h4>
+  <p class="subscription__description">Start your journey toward intelligent
+wealth management in under 5 minutes.</p>
+</div>
+          <form class="subscription__form">
+          <div class="subscription__form-item">
+            <label for="fullname">Full Name
+            </label>
+            <input id="fullname" name="fullname" type="text" placeholder="e.g John Doe" required>
+          </div>
+           <div class="subscription__form-item">
+            <label for="email">Email Address
+            </label>
+            <input id="email" name="email" type="email" placeholder="e.g john.doe@gmail.com" required>
+          </div>
+           <div class="subscription__form-item">
+            <label for="phone">Phone Number
+            </label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+           <div class="subscription__form-item">
+            <label for="goal">Investment Goal</label>
+
+<select id="goal" name="goal" required>
+  <option value="" disabled selected>Select an option</option>
+  <option value="long-term">Long-Term Growth</option>
+  <option value="retirement">Retirement Planning</option>
+  <option value="passive">Passive Income</option>
+  <option value="wealth">Wealth Preservation</option>
+</select>
+          </div>
+          <div class="subscription__form-item">
+            <label for="plan">Preferred Plan</label>
+
+<select id="plan" name="plan" required>
+  <option value="" disabled selected>Select an option</option>
+  <option value="free">Free</option>
+  <option value="monthly">Monthly</option>
+  <option value="yearly">Yearly</option>
+</select>
+          </div>
+
+          <div class="subscription__form-item">
+            <label for="experience">Investment Experience</label>
+
+<select id="experience" name="experience" required>
+  <option value="" disabled selected>Select an option</option>
+  <option value="beginner">Beginner</option>
+  <option value="intermediate">Intermediate</option>
+  <option value="advanced">Advanced</option>
+</select>
+          </div>
+
+          <div class="subscription__form-item">
+            <label for="address">Address
+            </label>
+            <input id="address" name="address" type="text">
+          </div>
+
+          <div class="subscription__form-checkbox">
+  <input type="checkbox" id="terms" name="terms" required>
+  <label for="terms">I accept the <a href="#" target="_blank"> Terms & Conditions</a></label>
+</div>
+<div class="subscription__form-checkbox">
+  <input type="checkbox" id="promote" name="promote">
+  <label for="promote">I would like to receive promotional emails
+and newsletters</label>
+</div>
+
+<button class="btn btn--primary" type="submit">Get Started</button>
+            
+          </form>
+        
+          </div>  
       </section>
     </main>
     <a class="scroll-top" href="#" aria-label="Back to top"
