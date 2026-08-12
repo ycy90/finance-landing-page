@@ -87,7 +87,7 @@ html {
 body {
   background-color: var(--color-bg-primary);
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -167,6 +167,11 @@ img {
   margin-block: var(--space-lg);
 }
 
+/* .navbar__menu-toggle {
+  background: none;
+  border: none;
+} */
+
 .navbar__logo {
   width: var(--navbar-logo-width);
   height: auto;
@@ -187,7 +192,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 50px;
+  gap: var(--space-2xl);
 }
 
 .hero__content {
@@ -195,7 +200,7 @@ img {
   flex-direction: column;
   gap: var(--space-lg);
 }
-.hero__eyebrow {
+.hero__kicker {
   font-size: var(--fs-sm);
   color: var(--color-accent);
 }
@@ -250,16 +255,15 @@ img {
 .features__container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: var(--space-2xl);
   align-items: center;
-  padding-block: var(--space-3xl);
+  padding-block: var(--space-2xl);
 }
 
 .features__grid {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: var(--space-2xl);
-  row-gap: var(--space-xl);
+  row-gap: var(--space-2xl);
 }
 
 .features__heading {
@@ -284,7 +288,7 @@ img {
   gap: var(--space-lg);
   border-radius: var(--br-xl);
   background-color: var(--color-bg-secondary);
-  padding: var(--space-3xl);
+  padding: var(--space-xl);
 }
 
 .features__title {
@@ -308,7 +312,6 @@ img {
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-3xl);
-
   padding: var(--space-3xl) var(--space-2xl);
 }
 
@@ -339,8 +342,9 @@ img {
 .trust__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: var(--space-2xl);
+  padding: var(--space-lg);
 }
 
 .trust__main-content {
@@ -349,7 +353,7 @@ img {
   gap: var(--space-base);
 }
 
-.trust__eyebrow {
+.trust__kicker {
   color: var(--color-accent);
   font-size: var(--fs-caption);
 }
@@ -393,8 +397,8 @@ img {
 .pricing__container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding-block: 50px;
+  gap: var(--space-3xl);
+  padding-block: var(--space-3xl);
 }
 
 .pricing__heading {
@@ -419,7 +423,7 @@ img {
 .pricing__cards {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 50px;
+  row-gap: var(--space-3xl);
 }
 
 .pricing__card {
@@ -439,7 +443,7 @@ img {
 .pricing__content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-md);
 }
 
 .pricing__type {
@@ -459,7 +463,7 @@ img {
   padding-left: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-sm);
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
 }
@@ -481,16 +485,69 @@ img {
 
 .pricing__best-value-badge {
   position: absolute;
-  top: 0.2rem; /* Badge exact positioning reasons */
-  right: 0.2rem; /* Badge exact positioning reasons */
+  top: -1rem; /* Badge exact positioning reasons */
+  right: -1rem; /* Badge exact positioning reasons */
   background-color: var(--color-gold-selected);
   color: var(--color-text-secondary);
-  transform: rotate(45deg) translate(32%); /* Badge exact positioning reasons */
-  padding-inline: 60px;
-  text-align: center;
+  transform: rotate(45deg) translate(30%); /* Badge exact positioning reasons */
+  padding-inline: var(--space-4xl);
 }
 
 /* ===== SUBSCRIPTION ===== */
+
+.subscription__container {
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  padding: var(--space-3xl) var(--space-2xl);
+}
+
+.subscription__image {
+  padding-inline: var(--space-xl);
+}
+
+.subscription__content {
+    display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.subscription__heading {
+  font-size: var(--fs-2xl);
+}
+
+.subscription__form {
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-base);
+}
+
+.subscription__description {
+  color: var(--color-text-muted);
+}
+
+.subscription__form-item {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-base);
+  gap: var(--space-sm);
+  color: var(--color-text-muted);
+}
+
+.subscription__form-item input, .subscription__form-item select {
+  background-color: var(--color-bg-secondary);
+ padding-block: var(--space-base);
+ padding-left: var(--space-base);
+ color: var(--color-text-primary);
+ border: none;
+ border-radius: var(--br-base);
+
+}
+
+
 /* ===== FAQS ===== */
 /* ===== NEWSLETTER ===== */
 /* ===== FOOTER ===== */
