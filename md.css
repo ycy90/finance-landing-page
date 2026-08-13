@@ -1,0 +1,45 @@
+/* TABLET - DESIGN */
+
+/* ===== FEATURES ===== */
+
+.features__grid {
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-base);
+}
+
+/* ===== PRICING ===== */
+
+.pricing__cards {
+    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-colums: repeat(2, 1fr);
+    column-gap: clamp(1rem, calc(2rem + 5vw), 4rem);
+    row-gap: clamp(1rem, calc(2rem + 5vw), 4rem);
+}
+
+.pricing__cards > :last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+/* ===== NEWSLETTE =====  */
+
+.newsletter__form input {
+grid-column: 2 / 4;
+}
+
+.newsletter__form button {
+
+grid-column: 4 / 5;
+}
+
+
+/* ===== FOOTER ===== */
+
+
+.footer-navigation__container {
+
+grid-template-columns: repeat(4, 1fr);
+column-gap: var(--space-base);
+}

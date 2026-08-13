@@ -34,7 +34,8 @@ p {
   --color-text-muted: #b2b5be;
 
   /* ===== FONT-SIZE ===== */
-
+  --fs-xxs: 0.3rem;
+--fs-xs: 0.5rem; /* 8px */
   --fs-caption: 0.75rem; /* 12px */
   --fs-sm: 0.875rem; /* 14px */
   --fs-base: 1rem; /* 16px */
@@ -47,7 +48,8 @@ p {
 
   /* ===== LAYOUT-VALUES ===== */
 
-  --container-width: 90rem; /* 1440px */
+  --mobile-width: 30rem;
+  --desktop-width: 90rem; /* 1440px */
   --navbar-logo-width: 14rem; /* 224px */
 
   /* ===== FONT-WEIGHT ===== */
@@ -119,7 +121,7 @@ didnt quite understand the logic behind it, to be honest */
 /* ===== LAYOUT ===== */
 
 .container {
-  max-width: var(--container-width);
+  max-width: var(--desktop-width);
   margin-inline: auto;
   padding-inline: var(--space-lg);
 }
@@ -143,6 +145,11 @@ didnt quite understand the logic behind it, to be honest */
   background-color: var(--color-accent);
 }
 
+.btn--secondary {
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
+}
+
 .btn--primary:hover,
 .btn--secondary:hover {
   color: var(--color-text-secondary);
@@ -160,17 +167,14 @@ didnt quite understand the logic behind it, to be honest */
 .newsletter__form input:focus-visible,
 .questions__title:focus-visible,
 .subscription__form-checkbox input:focus-visible,
-.subscription__form-checkbox a:focus-visible  {
+.subscription__form-checkbox a:focus-visible,
+.footer-navigation__link:focus-visible,
+.footer-navigation__connection-icon:focus-visible {
   outline: 2px solid var(--color-gold-selected);
   outline-offset: 4px;
   border-radius: var(--br-base);
 }
 
-.btn--secondary {
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-text-primary);
-  text-align: center;
-}
 
 .pricing__card:nth-child(3) .btn {
   color: var(--color-text-secondary);
@@ -182,9 +186,12 @@ didnt quite understand the logic behind it, to be honest */
   background-color: var(--color-secondary-shade);
 }
 
-.questions__item[open] .chevron-rotate {
-  transform: rotate(180deg);
+.chevron-rotate {
   transition: transform 200ms ease;
+}
+
+.questions__item[open] .chevron-rotate {
+  transform: rotate(180deg);  
 }
 /* ===== NAVIGATION ===== */
 
@@ -347,9 +354,6 @@ didnt quite understand the logic behind it, to be honest */
   justify-content: space-between;
   gap: var(--space-3xl);
   padding: var(--space-3xl) var(--space-2xl);
-}
-
-.trust__container {
   position: relative;
 }
 
@@ -651,17 +655,14 @@ didnt quite understand the logic behind it, to be honest */
   display: flex;
   flex-direction: column;
   gap: var(--space-base);
+   color: var(--color-text-muted);
+  text-align: center;
+  font-size: var(--fs-caption);
 }
 
 .newsletter__title {
   color: var(--color-text-primary);
   text-align: center;
-}
-
-.newsletter__content {
-  color: var(--color-text-muted);
-  text-align: center;
-  font-size: var(--fs-caption);
 }
 
 .newsletter__form {
@@ -678,8 +679,90 @@ padding-left: var(--space-base);
 border-radius: var(--br-base);
 }
 
-.
-/* ===== FOOTER ===== */
+/* ===== FOOTER - NAVIGATION ===== */
+
+
+footer {
+   background-color: var(--color-bg-secondary);
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-base);
+}
+
+.footer-navigation__container { 
+  display: grid;
+  grid-template-columns:  1fr;
+  padding: var(--space-2xl);
+  font-size: var(--fs-sm);
+}
+
+.footer-navigation__logo-media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-navigation__logo-image {
+
+  width: 8rem;
+}
+
+.footer-navigation__connection-icon img {
+  width: var(--space-base);
+  height: auto;
+}
+
+.footer-navigation__tagline {
+  color: var(--color-text-primary);
+  font-size: var(--fs-xxs);
+}
+
+.footer-navigation__connection {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: flex-start;
+  gap: var(--space-base);
+  padding-left: 0;
+
+}
+
+.footer-navigation__group {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-navigation__title {
+  color: var(--color-text-primary);
+}
+
+.footer-navigation__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-navigation__item {
+  font-size: var(--fs-xs);
+}
+.footer-navigation__link:visited {
+
+  color: var(--color-text-muted);
+}
+
+/* ===== FOOTER - CREDENTIALS ===== */
+
+.footer-credentials__container {
+  display: flex;
+  flex-direction: column;       
+  gap: var(--space-md);
+  color: var(--color-text-muted);
+  font-size: var(--fs-xxs);
+  text-align: center;
+  padding-inline: var(--space-2xl);
+}
+
 /* ===== UTILITY ===== */
 
 .scroll-top {
