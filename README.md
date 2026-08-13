@@ -68,6 +68,8 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [x] Completed Features section CSS
 - [x] Completed Trust section HTML & CSS
 - [x] At this stage, I’m adapting the completed sections for mobile first to make the responsive implementation more manageable.
+- [x] Completed Newsletter section HTML & CSS.
+- [x] Completed Footer section HTML.
 
   -[ ]The existing desktop styles are being preserved and will be refined after the mobile layout is established.
 
