@@ -13,6 +13,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
+      <link
+      rel="stylesheet"
+      href="./md.css"
+      media="all and (min-width: 620px) and (max-width: 1023.98px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./lg.css"
+      media="all and (min-width: 1024px)"
+    />
   </head>
   <body>
     <header>
@@ -205,7 +215,7 @@
         </div>
       </section>
 
-      <section class="trust">
+      <section class="trust container">
         <div class="trust__container">
           <picture class="trust__media">
             <source
@@ -260,7 +270,6 @@
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <section class="pricing">
@@ -327,7 +336,7 @@
           </div>
         </div>
       </section>
-      <section class="subscription">
+      <section class="subscription container">
         <picture class="subscription__media">
             <source
               srcset="
@@ -353,7 +362,7 @@
             />
           </picture>
 
-   <div class="subscription__container container">     
+   <div class="subscription__container">     
 <div class="subscription__content">
   <h4 class="subscription__heading">Join Equitas</h4>
   <p class="subscription__description">Start your journey toward intelligent
@@ -434,7 +443,7 @@ and newsletters</label>
 
       <section class="questions">
         <div class="questions__container container">
-          <p class="questions__heading">Frequently Asked Questions</p>
+          <h3 class="questions__heading">Frequently Asked Questions</h3>
           <div class="questions__list">
             <details class="questions__item" open name="faq">
               
@@ -504,8 +513,10 @@ delivered directly to your inbox every week.</p>
         </div>
       </section>
 
-<footer>
-      <section class="footer-navigation">
+
+    </main>
+    <footer>
+      <nav class="footer-navigation">
 <div class="footer-navigation__container container">
   <div class="footer-navigation__logo-media">
     <a href="" class="footer-navigation__logo"><img src="./assets/logo/logo.svg" alt="Equitas Private" class="footer-navigation__logo-image"></a>
@@ -545,7 +556,7 @@ for the global elite.</p>
       </ul>
     </div>
 </div>
-</section>
+</nav>
 
 <section class="footer-credentials">
     <div class="footer-credentials__container">
@@ -554,7 +565,6 @@ for the global elite.</p>
     </div>
     </section>
 </footer>
-    </main>
     <a class="scroll-top" href="#" aria-label="Back to top"
       ><img src="./assets/icons/arrow-top.svg" alt=""
     /></a>
