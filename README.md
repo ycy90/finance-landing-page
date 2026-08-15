@@ -41,11 +41,13 @@ No frameworks or libraries are used at this stage in order to strengthen my unde
 - Image optimization
 - GitHub Pages deployment
 
-## Deployment
+## Deployment - Live Demo
 
-The first static version of the website will be deployed using GitHub Pages.
+The current version of the project is available here:
 
-## The first public release will be deployed after Phase 1 is complete.
+**[View Live Demo](https://ycy90.github.io/finance-landing-page/)**
+
+The project is currently deployed as a static HTML/CSS website using GitHub Pages.
 
 ## Future Improvements
 
