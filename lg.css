@@ -36,7 +36,9 @@
 
 .hero__container {
 
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
 }
 
 .hero__trust-items {
