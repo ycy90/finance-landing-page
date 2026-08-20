@@ -20,6 +20,7 @@ p {
 /* ===== VARIABLES ===== */
 
 :root {
+
   /* ===== COLOR ===== */
 
   --color-bg-primary: #051329;
@@ -35,22 +36,22 @@ p {
   --color-text-muted: #b2b5be;
 
   /* ===== FONT-SIZE ===== */
+
   --fs-xxs: 0.3rem;
---fs-xs: 0.5rem; /* 8px */
+  --fs-xs: 0.5rem; /* 8px */
   --fs-caption: 0.75rem; /* 12px */
   --fs-sm: 0.875rem; /* 14px */
-  --fs-base: 1rem; /* 16px */
-  --fs-md: 1.14rem; /* 18.5px~ */
-  --fs-lg: 1.25rem; /* 20px */
-  --fs-xl: 1.5rem; /* 24px */
-  --fs-2xl: 2rem; /* 32px */
-  --fs-3xl: 3rem; /* 48px */
-  --fs-hero: 4rem; /* 64px */
+  --fs-base: clamp(0.875rem, 2.5vw, 1.2rem); /* 16px */
+  --fs-md: clamp(1.14rem, 2.5vw, 1.50rem); /* 18.5px~ */
+  --fs-lg: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px */
+  --fs-xl: clamp(1.5rem, 2.5vw, 2rem); /* 24px */
+  --fs-2xl: clamp(2rem, 2.5vw, 4rem); /* 32px */
+  --fs-3xl: clamp(3rem, 2.5vw, 4.5rem); /* 48px */
+  --fs-hero: clamp(4rem, 2.5vw, 5rem); /* 64px */
 
   /* ===== LAYOUT-VALUES ===== */
 
-  --mobile-width: 30rem;
-  --desktop-width: 90rem; /* 1440px */
+  --desktop-width: 100rem; /* 1440px */
   --navbar-logo-width: 14rem; /* 224px */
 
   /* ===== FONT-WEIGHT ===== */
@@ -123,7 +124,7 @@ didnt quite understand the logic behind it, to be honest */
 /* ===== LAYOUT ===== */
 
 .container {
-  /* max-width: var(--desktop-width); */
+  max-width: var(--desktop-width);
   margin-inline: auto;
   padding-inline: var(--space-lg);
 }
@@ -694,9 +695,9 @@ footer {
 
 .footer-navigation__container { 
   display: grid;
-  grid-template-columns:  1fr;
-  padding: var(--space-2xl);
-  font-size: var(--fs-sm);
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--space-base);
+  margin-block: var(--space-2xl);
 }
 
 .footer-navigation__logo-media {
@@ -706,7 +707,6 @@ footer {
 }
 
 .footer-navigation__logo-image {
-
   width: 8rem;
 }
 
@@ -735,6 +735,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font-size: var(--fs-base);
 }
 
 .footer-navigation__title {
@@ -747,8 +748,9 @@ footer {
 }
 
 .footer-navigation__item {
-  font-size: var(--fs-xs);
+font-size: var(--fs-base);
 }
+
 .footer-navigation__link:visited {
 
   color: var(--color-text-muted);
