@@ -681,6 +681,7 @@ didnt quite understand the logic behind it, to be honest */
 border: 1px solid var(--color-text-muted);
 padding-left: var(--space-base);
 border-radius: var(--br-base);
+color: var(--color-text-primary);
 }
 
 /* ===== FOOTER - NAVIGATION ===== */
