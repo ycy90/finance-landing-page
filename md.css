@@ -2,17 +2,17 @@
 
 /* ===== HERO SPECIFIC DESIGN ===== */
 
-@media (min-width: 961px) and (max-width: 1023.98px){
-.hero__container {
-  display: flex;
-  flex-direction: row;
-  gap: var(--space-2xl);
- 
-}
+@media (min-width: 961px) and (max-width: 1023.98px) {
+  .hero__container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-2xl);
+  }
 
-.hero__trust-items {
-  flex-direction: row;
-} }
+  .hero__trust-items {
+    flex-direction: row;
+  }
+}
 
 /* ===== FEATURES ===== */
 
