@@ -822,9 +822,15 @@ footer {
   color: var(--color-text-muted);
 }
 
+.footer__location iframe {
+  width: 100%;
+  height: auto;
+  border-radius: var(--br-lg);
+}
+
 /* ===== FOOTER - CREDENTIALS ===== */
 
-.footer-credentials__container {
+.credentials__container {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
