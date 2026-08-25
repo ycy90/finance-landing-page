@@ -179,7 +179,7 @@ img {
 .footer-navigation__connection-item:focus-visible,
 .subscription__login a:focus-visible,
 .login__info input:focus-visible,
-.login__forget a:focus-visible, 
+.login__forget a:focus-visible,
 .scroll:focus-visible {
   outline: 2px solid var(--color-gold-selected);
   outline-offset: var(--space-xs);
@@ -206,7 +206,6 @@ img {
   width: 100%;
   z-index: 10;
   background-color: var(--color-bg-primary);
-  
 }
 
 .navbar__menu-toggle {
@@ -356,9 +355,6 @@ img {
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
 }
-
-
-
 
 /* ===== FEATURES ===== */
 
@@ -670,7 +666,7 @@ img {
 
 .subscription__form-checkbox a {
   color: var(--color-accent);
-} 
+}
 
 .subscription__login {
   text-align: center;
@@ -858,7 +854,7 @@ footer {
   color: var(--color-text-muted);
   font-size: var(--fs-base);
   text-align: center;
-  padding-inline: var(--space-2xl);
+  padding: var(--space-2xl) var(--space-2xl);
 }
 
 /* ===== UTILITY ===== */
@@ -882,9 +878,7 @@ footer {
   box-shadow: 0 var(--space-sm) var(--space-base) rgb(0 0 0 / 0.2);
 }
 
-
 /* ===== LOGIN SCREEN ======  */
-
 
 .login__container {
   display: flex;
@@ -894,12 +888,12 @@ footer {
   margin: 50dvh auto;
   padding-inline: var(--space-2xl);
 }
-  
+
 .login__info {
-color: var(--color-text-primary);
-display: flex;
-flex-direction: column;
-gap: var(--space-md);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 .login__info input {
