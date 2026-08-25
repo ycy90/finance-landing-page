@@ -12,16 +12,12 @@
 
 .pricing__cards {
     
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-colums: repeat(2, 1fr);
-    column-gap: clamp(1rem, calc(2rem + 5vw), 4rem);
-    row-gap: clamp(1rem, calc(2rem + 5vw), 4rem);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 1 1 calc((100% - 5rem) / 2);
 }
 
-.pricing__cards > :last-child {
-  grid-column: 1 / -1;
-  justify-self: center;
-}
 
 /* ===== NEWSLETTE =====  */
 

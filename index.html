@@ -9,11 +9,14 @@
       type="image/svg+xml"
       href="./assets/icons/coins.svg?v=12345"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
-      <link
+    <link
       rel="stylesheet"
       href="./md.css"
       media="all and (min-width: 620px) and (max-width: 1023.98px)"
@@ -28,17 +31,44 @@
     <header>
       <div class="container">
         <nav class="navbar">
-          <button
-            class="navbar__menu-toggle desktop--hidden"
-            aria-label="Open navigation menu"
-          >
-            <img
-              src="./assets/icons/hamburger.svg"
-              alt=""
-              class="navbar__menu-icon"
-              aria-hidden="true"
-            />
-          </button>
+          <details class="navbar__menu-toggle desktop--hidden">
+            <summary
+              class="navbar__menu-toggle-icon"
+              aria-label="Open navigation menu"
+            >
+              <img
+                src="./assets/icons/hamburger.svg"
+                alt=""
+                class="navbar__menu-icon"
+                aria-hidden="true"
+              />
+            </summary>
+            <ul class="navbar__items--mobile">
+              <li class="navbar__item--mobile">
+                <a class="navbar__item-link--mobile" href="#insights"
+                  >Insights</a
+                >
+              </li>
+              <li class="navbar__item--mobile">
+                <a class="navbar__item-link--mobile" href="#pricing">Pricing</a>
+              </li>
+              <li class="navbar__item--mobile">
+                <a class="navbar__item-link--mobile" href="#portfolio"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="navbar__item--mobile">
+                <a class="navbar__item-link--mobile" href="#footer">About</a>
+              </li>
+              <li class="navbar__item--mobile">
+                <a class="navbar__item-link--mobile" href="#login">Login</a>
+              </li>
+              <li class="navbar__button--mobile">
+                <a class="btn btn--primary" href="#subscription">Get Started</a>
+              </li>
+            </ul>
+          </details>
+
           <a href="#" class="navbar__logo-link"
             ><img
               src="./assets/logo/logo.svg"
@@ -46,24 +76,24 @@
               class="navbar__logo"
           /></a>
 
-          <ul class="navbar__items">
+          <ul class="navbar__items navbar__items--hidden">
             <li class="navbar__item">
-              <a class="navbar__item-link" href="#">Insights</a>
+              <a class="navbar__item-link" href="#insights">Insights</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__item-link" href="#">Pricing</a>
+              <a class="navbar__item-link" href="#pricing">Pricing</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__item-link" href="#">Portfolio</a>
+              <a class="navbar__item-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__item-link" href="#">About</a>
+              <a class="navbar__item-link" href="#footer">About</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__item-link" href="#">Login</a>
+              <a class="navbar__item-link" href="#login">Login</a>
             </li>
             <li class="navbar__item">
-              <a class="btn btn--primary" href="#">Get Started</a>
+              <a class="btn btn--primary" href="#subscription">Get Started</a>
             </li>
           </ul>
         </nav>
@@ -71,7 +101,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section id="insights" class="hero">
         <div class="hero__container container">
           <div class="hero__content">
             <p class="hero__kicker">Institutional Grade Excellence</p>
@@ -85,8 +115,8 @@
               with real-time AI-driven analysis.
             </p>
             <div class="hero__buttons">
-              <a class="btn btn--primary" href="#">Get Started</a>
-              <a class="btn btn--secondary" href="#">Learn More</a>
+              <a class="btn btn--primary" href="#subscription">Get Started</a>
+              <a class="btn btn--secondary" href="#features">Learn More</a>
             </div>
             <div class="hero__trust-items">
               <div class="hero__trust-item">
@@ -109,25 +139,26 @@
           </div>
 
           <picture class="hero__media">
+            <!-- Mobile -->
             <source
-              srcset="
-                ./assets/images/hero-tablet.webp  406w,
-                ./assets/images/hero-desktop.webp 789w
-              "
-              sizes="(max-width: 767px) 100vw, 50vw"
+              media="(max-width: 1023.8px)"
+              srcset="./assets/images/hero-tablet.webp"
               type="image/webp"
             />
+
+            <!-- Desktop -->
             <source
-              srcset="
-                ./assets/images/hero-tablet.jpeg  406w,
-                ./assets/images/hero-desktop.jpeg 789w
-              "
-              sizes="(max-width: 767px) 100vw, 50vw"
-              type="image/jpg"
+              media="(min-width: 1024px)"
+              srcset="./assets/images/hero-desktop.webp"
+              type="image/webp"
             />
+
+            <!-- Fallback -->
             <img
-              src="./assets/images/hero-desktop.jpeg"
-              alt="Charts"
+              src="./assets/images/hero-desktop.jpg"
+              alt="A dashboard showing various financial charts and analytics"
+              width="1920"
+              height="821"
               decoding="async"
               class="hero__image"
             />
@@ -135,7 +166,7 @@
         </div>
       </section>
 
-      <section class="features">
+      <section id="features" class="features">
         <div class="features__container container">
           <h2 class="features__heading">Tailored for Precision</h2>
           <div class="features__grid">
@@ -215,28 +246,30 @@
         </div>
       </section>
 
-      <section class="trust container">
-        <div class="trust__container">
+      <section id="trust" class="trust container">
+        <div class="trust__media-container">
           <picture class="trust__media">
+            <!-- Mobile -->
             <source
-              srcset="
-                ./assets/images/trust-tablet.webp  406w,
-                ./assets/images/trust-desktop.webp 789w
-              "
-              sizes="(max-width: 767px) 100vw, 50vw"
+              media="(max-width: 1023.8px)"
+              srcset="./assets/images/trust-tablet.webp"
               type="image/webp"
             />
+
+            <!-- Desktop -->
             <source
-              srcset="
-                ./assets/images/trust-tablet.jpeg  406w,
-                ./assets/images/trust-desktop.jpeg 789w
-              "
-              sizes="(max-width: 767px) 100vw, 50vw"
-              type="image/jpeg"
+              media="(min-width: 1024px)"
+              srcset="./assets/images/trust-desktop.webp"
+              type="image/webp"
             />
+
+            <!-- Fallback -->
             <img
-              src="./assets/images/trust-desktop.jpeg"
-              alt="Charts"
+              src="./assets/images/trust-desktop.jpg"
+              alt="A city skyline in a financial district with a golden hue, symbolizing trust and stability"
+              width="1920"
+              height="821"
+              loading="lazy"
               decoding="async"
               class="trust__image"
             />
@@ -246,33 +279,32 @@
             <span class="trust__experience-value">15+</span>
             <span class="trust__experience-text">Years of Excellence</span>
           </div>
-          </div>
+        </div>
 
-          <div class="trust__content">
-            <div class="trust__main-content">
-              <p class="trust__kicker">Established Reliability</p>
-              <h2 class="trust__heading">Our Legacy of Excellence</h2>
-              <p class="trust__description">
-                For over a decade, Equitas has stood as a bastion of private
-                wealth management. We bridge the gap between traditional
-                fiduciary responsibility and the speed of modern digital
-                infrastructure.
-              </p>
+        <div class="trust__content">
+          <div class="trust__main-content">
+            <p class="trust__kicker">Established Reliability</p>
+            <h2 class="trust__heading">Our Legacy of Excellence</h2>
+            <p class="trust__description">
+              For over a decade, Equitas has stood as a bastion of private
+              wealth management. We bridge the gap between traditional fiduciary
+              responsibility and the speed of modern digital infrastructure.
+            </p>
+          </div>
+          <div class="trust__stats">
+            <div class="trust__stat">
+              <span class="trust__stat-value">$5B+</span>
+              <span class="trust__stat-label">ASSETS MANAGED</span>
             </div>
-            <div class="trust__stats">
-              <div class="trust__stat">
-                <span class="trust__stat-value">$5B+</span>
-                <span class="trust__stat-label">ASSETS MANAGED</span>
-              </div>
-              <div class="trust__stat">
-                <span class="trust__stat-value">50k+</span>
-                <span class="trust__stat-label">ACTIVE CLIENTS</span>
-              </div>
+            <div class="trust__stat">
+              <span class="trust__stat-value">50k+</span>
+              <span class="trust__stat-label">ACTIVE CLIENTS</span>
             </div>
           </div>
+        </div>
       </section>
 
-      <section class="pricing">
+      <section id="pricing" class="pricing">
         <div class="container pricing__container">
           <div class="pricing__heading">
             <h2 class="pricing__title">Strategic Tiers</h2>
@@ -294,7 +326,9 @@
                   <li class="pricing__perk">Limited Analytics</li>
                 </ul>
               </div>
-              <a class="btn btn--secondary" href="#">Current Plan</a>
+              <a class="btn btn--secondary btn--full-width" href="#subscription"
+                >Current Plan</a
+              >
             </article>
             <article class="pricing__card">
               <div class="pricing__content">
@@ -312,9 +346,11 @@
                 </ul>
               </div>
 
-              <a class="btn btn--primary" href="#">Select Professional</a>
+              <a class="btn btn--primary btn--full-width" href="#subscription"
+                >Select Professional</a
+              >
             </article>
-            <article class="pricing__card">
+            <article class="pricing__card pricing__card--highlighted">
               <div class="pricing__content">
                 <div class="pricing__plan">
                   <h3 class="pricing__type">Elite</h3>
@@ -330,243 +366,397 @@
                   <li class="pricing__perk">Zero Trading Commissions</li>
                 </ul>
               </div>
-              <a class="btn btn--primary" href="#">Select Elite</a>
+              <a class="btn btn--primary btn--full-width" href="#subscription"
+                >Select Elite</a
+              >
               <span class="pricing__best-value-badge">Best Value</span>
             </article>
           </div>
         </div>
       </section>
-      <section class="subscription container">
+      <section id="subscription" class="subscription container">
         <picture class="subscription__media">
-            <source
-              srcset="
-                ./assets/images/signup-tablet.webp  406w,
-                ./assets/images/signup-desktop.webp 789w
-              "
-              sizes="(max-width: 767px) 100vw, 50vw"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./assets/images/signup-tablet.jpeg  406w,
-                ./assets/images/signup-desktop.jpeg 789w
-              "
-              sizes="(max-width: 767px) 100vw, 50vw"
-              type="image/jpeg"
-            />
-            <img
-              src="./assets/images/signup-desktop.jpg"
-              alt="Charts"
-              decoding="async"
-              class="subscription__image"
-            />
-          </picture>
+          <!-- Mobile -->
+          <source
+            media="(max-width: 1023.8px)"
+            srcset="./assets/images/signup-tablet.webp"
+            type="image/webp"
+          />
 
-   <div class="subscription__container">     
-<div class="subscription__content">
-  <h4 class="subscription__heading">Join Equitas</h4>
-  <p class="subscription__description">Start your journey toward intelligent
-wealth management in under 5 minutes.</p>
-</div>
-          <form class="subscription__form" method="POST" netlify>
-          <div class="subscription__form-item">
-            <label for="fullname">Full Name
-            </label>
-            <input id="fullname" name="fullname" type="text" placeholder="e.g John Doe" required autocomplete="name">
+          <!-- Desktop -->
+          <source
+            media="(min-width: 1024px)"
+            srcset="./assets/images/signup-desktop.webp"
+            type="image/webp"
+          />
+
+          <!-- Fallback -->
+          <img
+            src="./assets/images/signup-desktop.jpg"
+            alt="A group of people grabbing each other wrists in a circle, symbolizing collaboration and trust"
+            width="1920"
+            height="821"
+            loading="lazy"
+            decoding="async"
+            class="subscription__image"
+          />
+        </picture>
+
+        <div class="subscription__container">
+          <div class="subscription__content">
+            <h2 class="subscription__heading">Join Equitas</h2>
+            <p class="subscription__description">
+              Start your journey toward intelligent wealth management in under 5
+              minutes.
+            </p>
           </div>
-           <div class="subscription__form-item">
-            <label for="email">Email Address
-            </label>
-            <input id="email" name="email" type="email" placeholder="e.g john.doe@gmail.com" required autocomplete="email">
-          </div>
-           <div class="subscription__form-item">
-            <label for="phone">Phone Number
-            </label>
-            <input id="phone" name="phone" type="tel" required autocomplete="tel">
-          </div>
+          <form class="subscription__form" method="POST" data-netlify="true">
             <div class="subscription__form-item">
-            <label for="address">Address
-            </label>
-            <input id="address" name="address" type="text" autocomplete="street-address" required>
-          </div>
-           <div class="subscription__form-item">
-            <label for="goal">Investment Goal</label>
+              <label for="fullname">Full Name </label>
+              <input
+                id="fullname"
+                name="fullname"
+                type="text"
+                placeholder="e.g John Doe"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="subscription__form-item">
+              <label for="email">Email Address </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="e.g john.doe@gmail.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="subscription__form-item">
+              <label for="phone">Phone Number </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                autocomplete="tel"
+              />
+            </div>
+            <div class="subscription__form-item">
+              <label for="address">Address </label>
+              <input
+                id="address"
+                name="address"
+                type="text"
+                autocomplete="street-address"
+                required
+              />
+            </div>
+            <div class="subscription__form-item">
+              <label for="goal">Investment Goal</label>
 
-<select id="goal" name="goal" required>
-  <option value="" disabled selected>Select an option</option>
-  <option value="long-term">Long-Term Growth</option>
-  <option value="retirement">Retirement Planning</option>
-  <option value="passive">Passive Income</option>
-  <option value="wealth">Wealth Preservation</option>
-</select>
-          </div>
-          <div class="subscription__form-item">
-            <label for="plan">Preferred Plan</label>
+              <select id="goal" name="goal" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="long-term">Long-Term Growth</option>
+                <option value="retirement">Retirement Planning</option>
+                <option value="passive">Passive Income</option>
+                <option value="wealth">Wealth Preservation</option>
+              </select>
+            </div>
+            <div class="subscription__form-item">
+              <label for="plan">Preferred Plan</label>
 
-<select id="plan" name="plan" required>
-  <option value="" disabled selected>Select an option</option>
-  <option value="free">Free</option>
-  <option value="monthly">Monthly</option>
-  <option value="yearly">Yearly</option>
-</select>
-          </div>
+              <select id="plan" name="plan" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="free">Free</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+              </select>
+            </div>
 
-          <div class="subscription__form-item">
-            <label for="experience">Investment Experience</label>
+            <div class="subscription__form-item">
+              <label for="experience">Investment Experience</label>
 
-<select id="experience" name="experience" required>
-  <option value="" disabled selected>Select an option</option>
-  <option value="beginner">Beginner</option>
-  <option value="intermediate">Intermediate</option>
-  <option value="advanced">Advanced</option>
-</select>
-          </div>
+              <select id="experience" name="experience" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
 
-        
+            <div class="subscription__form-checkbox">
+              <input type="checkbox" id="terms" name="terms" required />
+              <label for="terms"
+                >I accept the
+                <a href="#footer" target="_blank"> Terms & Conditions</a></label
+              >
+            </div>
+            <div class="subscription__form-checkbox">
+              <input type="checkbox" id="promote" name="promote" />
+              <label for="promote"
+                >I would like to receive promotional emails and
+                newsletters</label
+              >
+            </div>
 
-          <div class="subscription__form-checkbox">
-  <input type="checkbox" id="terms" name="terms" required>
-  <label for="terms">I accept the <a href="#" target="_blank"> Terms & Conditions</a></label>
-</div>
-<div class="subscription__form-checkbox">
-  <input type="checkbox" id="promote" name="promote">
-  <label for="promote">I would like to receive promotional emails
-and newsletters</label>
-</div>
-
-<button class="btn btn--primary" type="submit">Get Started</button>
-            
+            <button class="btn btn--primary" type="submit">Get Started</button>
           </form>
-        
-          </div>  
+        </div>
       </section>
 
-      <section class="questions">
+      <section id="questions" class="questions">
         <div class="questions__container container">
-          <h3 class="questions__heading">Frequently Asked Questions</h3>
+          <h2 class="questions__heading">Frequently Asked Questions</h2>
           <div class="questions__list">
             <details class="questions__item" open name="faq">
-              
-  <summary class="questions__title"><span>How secure is my financial data?</span><img src="./assets/icons/chevron-down.svg" alt="" class="chevron-rotate" aria-hidden="true"></summary>
+              <summary class="questions__title">
+                <span>How secure is my financial data?</span
+                ><img
+                  src="./assets/icons/chevron-down.svg"
+                  alt=""
+                  class="chevron-rotate"
+                  aria-hidden="true"
+                />
+              </summary>
 
+              <p class="questions__description">
+                We utilize bank-level AES-256 bit encryption and multi-factor
+                authentication (MFA) to ensure that your sensitive information
+                remains private and secure. Our systems are audited annually by
+                third-party cybersecurity firms.
+              </p>
+            </details>
 
-  <p class="questions__description">
-We utilize bank-level AES-256 bit
-encryption and multi-factor
-authentication (MFA) to ensure that your
-sensitive information remains private and
-secure. Our systems are audited annually
-by third-party cybersecurity firms.  </p>
-</details>
+            <details class="questions__item" name="faq">
+              <summary class="questions__title">
+                <span>What types of investments can I manage?</span
+                ><img
+                  src="./assets/icons/chevron-down.svg"
+                  alt=""
+                  class="chevron-rotate"
+                  aria-hidden="true"
+                />
+              </summary>
 
- <details class="questions__item" name="faq">
-  
-  <summary class="questions__title"><span>What types of investments can I
-manage?</span><img src="./assets/icons/chevron-down.svg" alt="" class="chevron-rotate" aria-hidden="true"></summary> 
+              <p class="questions__description">
+                Equitas supports a range of assets, including stocks, bonds,
+                ETFs, and other diversified investments.
+              </p>
+            </details>
 
-  <p class="questions__description">
-Equitas supports a range of assets, including stocks, bonds, ETFs, and other diversified investments.  </p>
-</details>
+            <details class="questions__item" name="faq">
+              <summary class="questions__title">
+                <span>Are there any hidden fees?</span
+                ><img
+                  src="./assets/icons/chevron-down.svg"
+                  alt=""
+                  class="chevron-rotate"
+                  aria-hidden="true"
+                />
+              </summary>
 
- <details class="questions__item" name="faq">
-  
-  <summary class="questions__title"><span>Are there any hidden fees?</span><img src="./assets/icons/chevron-down.svg" alt="" class="chevron-rotate" aria-hidden="true"></summary>
+              <p class="questions__description">
+                No. All applicable fees are clearly disclosed upfront, with no
+                hidden charges.
+              </p>
+            </details>
+            <details class="questions__item" name="faq">
+              <summary class="questions__title">
+                <span>Can I export my data for tax purposes?</span
+                ><img
+                  src="./assets/icons/chevron-down.svg"
+                  alt=""
+                  class="chevron-rotate"
+                  aria-hidden="true"
+                />
+              </summary>
 
-  <p class="questions__description">
-No. All applicable fees are clearly disclosed upfront, with no hidden charges.</p>
-</details>
- <details class="questions__item" name="faq">
+              <p class="questions__description">
+                Yes. You can export your portfolio and transaction data in
+                convenient formats for tax reporting.
+              </p>
+            </details>
 
-  <summary class="questions__title"><span>Can I export my data for tax purposes?</span><img src="./assets/icons/chevron-down.svg" alt="" class="chevron-rotate" aria-hidden="true"></summary>
+            <details class="questions__item" name="faq">
+              <summary class="questions__title">
+                <span>Is there a mobile app available?</span
+                ><img
+                  src="./assets/icons/chevron-down.svg"
+                  alt=""
+                  class="chevron-rotate"
+                  aria-hidden="true"
+                />
+              </summary>
 
-  <p class="questions__description">
-Yes. You can export your portfolio and transaction data in convenient formats for tax reporting.  </p>
-</details>
-
-<details class="questions__item" name="faq">
-  
-      <summary class="questions__title"><span>Is there a mobile app available?</span><img src="./assets/icons/chevron-down.svg" alt="" class="chevron-rotate" aria-hidden="true"></summary>
-
-  <p class="questions__description">
-Yes. Equitas is available on mobile, giving you secure access to your portfolio wherever you are. </p>
-</details>
-
-
+              <p class="questions__description">
+                Yes. Equitas is available on mobile, giving you secure access to
+                your portfolio wherever you are.
+              </p>
+            </details>
           </div>
         </div>
       </section>
 
-      <section class="newsletter">
+      <section id="newsletter" class="newsletter">
         <div class="newsletter__container container">
           <div class="newsletter__content">
-            <h5 class="newsletter__title">Insights for the Modern Investor</h5>
-            <p class="newsletter__description">Get exclusive market analysis and investment strategy updates
-delivered directly to your inbox every week.</p>
+            <h2 class="newsletter__title">Insights for the Modern Investor</h2>
+            <p class="newsletter__description">
+              Get exclusive market analysis and investment strategy updates
+              delivered directly to your inbox every week.
+            </p>
 
-<div class="newsletter__form-group">
-<form class="newsletter__form" method="POST" netlify>
-  <label for="subscribe-email" class="visually-hidden">Enter Your Email Address</label>
-  <input id="subscribe-email" name="subscribe-email" type="email" placeholder="Enter Your Email Address">
-  <button class="btn btn--primary" type="submit">Subscribe</button></form>
-</div>
+            <div class="newsletter__form-group">
+              <form class="newsletter__form" method="POST" data-netlify="true">
+                <label for="subscribe-email" class="visually-hidden"
+                  >Enter Your Email Address</label
+                >
+                <input
+                  id="subscribe-email"
+                  name="subscribe-email"
+                  type="email"
+                  placeholder="Enter Your Email Address"
+                  required
+                />
+                <button class="btn btn--primary" type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
-
-
     </main>
-    <footer>
+    <footer id="footer">
       <nav class="footer-navigation">
-<div class="footer-navigation__container container">
-  <div class="footer-navigation__logo-media">
-    <a href="" class="footer-navigation__logo"><img src="./assets/logo/logo.svg" alt="Equitas Private" class="footer-navigation__logo-image"></a>
-    <p class="footer-navigation__tagline">Modernizing private wealth management
-for the global elite.</p> 
+        <div class="footer-navigation__container container">
+          <div class="footer-navigation__logo-media">
+            <a href="" class="footer-navigation__logo"
+              ><img
+                src="./assets/logo/logo.svg"
+                alt="Equitas Private"
+                class="footer-navigation__logo-image"
+            /></a>
+            <p class="footer-navigation__tagline">
+              Modernizing private wealth management for the global elite.
+            </p>
 
-    <ul class="footer-navigation__connection">
-      <li class="footer-navigation__connection-item"><a href="#" class="footer-navigation__connection-icon" aria-label="Facebook"><img src="./assets/logo/facebook-logo.svg" alt="" aria-hidden="true"></a></li>
-      <li class="footer-navigation__connection-item"><a href="#" class="footer-navigation__connection-icon" aria-label="X"><img src="./assets/logo/x-logo.svg" alt="" aria-hidden="true"></a></li>
-      <li class="footer-navigation__connection-item"><a href="#" class="footer-navigation__connection-icon" aria-label="Linkedin"><img src="./assets/logo/linkedin-logo.svg" alt="" aria-hidden="true"></a></li>
-    </ul>
-    </div>
-    <div class="footer-navigation__group">
-      <h6 class="footer-navigation__title">Company</h6>
-      <ul class="footer-navigation__list">
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">About Us</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Careers</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Press</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Insights</a></li>
-      </ul>
-    </div>
-    <div class="footer-navigation__group">
-      <h6 class="footer-navigation__title">Services</h6>
-      <ul class="footer-navigation__list">
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Investment Strategy</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Market Analysis</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Risk Management</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Wealth Advisor</a></li>
-      </ul>
-    </div>
-    <div class="footer-navigation__group">
-      <h6 class="footer-navigation__title">Legal</h6>
-      <ul class="footer-navigation__list">
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Privacy Policy</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Terms of Service</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Disclosures</a></li>
-        <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">SIPC Protection</a></li>
-      </ul>
-    </div>
-  
-</div>
-</nav>
+            <ul class="footer-navigation__connection">
+              <li class="footer-navigation__connection-item">
+                <a
+                  href="#footer"
+                  class="footer-navigation__connection-icon"
+                  aria-label="Facebook"
+                  ><img
+                    src="./assets/logo/facebook-logo.svg"
+                    alt=""
+                    aria-hidden="true"
+                /></a>
+              </li>
+              <li class="footer-navigation__connection-item">
+                <a
+                  href="#footer"
+                  class="footer-navigation__connection-icon"
+                  aria-label="X"
+                  ><img
+                    src="./assets/logo/x-logo.svg"
+                    alt=""
+                    aria-hidden="true"
+                /></a>
+              </li>
+              <li class="footer-navigation__connection-item">
+                <a
+                  href="#footer"
+                  class="footer-navigation__connection-icon"
+                  aria-label="Linkedin"
+                  ><img
+                    src="./assets/logo/linkedin-logo.svg"
+                    alt=""
+                    aria-hidden="true"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-navigation__group">
+            <h3 class="footer-navigation__title">Company</h3>
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a href="#footer" class="footer-navigation__link">About Us</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#footer" class="footer-navigation__link">Careers</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#footer" class="footer-navigation__link">Press</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#insights" class="footer-navigation__link">Insights</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-navigation__group">
+            <h3 class="footer-navigation__title">Services</h3>
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a href="#features" class="footer-navigation__link"
+                  >Investment Strategy</a
+                >
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Market Analysis</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Risk Management</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#" class="footer-navigation__link">Wealth Advisor</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-navigation__group">
+            <h3 class="footer-navigation__title">Legal</h3>
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a href="#footer" class="footer-navigation__link"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#footer" class="footer-navigation__link"
+                  >Terms of Service</a
+                >
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#footer" class="footer-navigation__link"
+                  >Disclosures</a
+                >
+              </li>
+              <li class="footer-navigation__item">
+                <a href="#footer" class="footer-navigation__link"
+                  >SIPC Protection</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-<section class="footer-credentials">
-    <div class="footer-credentials__container">
-      <p class="footer-credentials__description">© 2024 Equitas Private Banking. All rights reserved. Member SIPC/FINRA.</p>
-      <p class="footer-credentials__disclaimer">INVESTMENT INVOLVES RISK. PAST PERFORMANCE DOES NOT GUARANTEE FUTURE RESULTS. THE VALUE OF INVESTMENTS CAN GO DOWN AS WELL AS UP. PLEASE READ ALL REGULATORY DISCLOSURES BEFORE</p>
-    </div>
-    </section>
-</footer>
+      <section class="footer-credentials">
+        <div class="footer-credentials__container">
+          <p class="footer-credentials__description">
+            © 2024 Equitas Private Banking. All rights reserved. Member
+            SIPC/FINRA.
+          </p>
+          <p class="footer-credentials__disclaimer">
+            INVESTMENT INVOLVES RISK. PAST PERFORMANCE DOES NOT GUARANTEE FUTURE
+            RESULTS. THE VALUE OF INVESTMENTS CAN GO DOWN AS WELL AS UP. PLEASE
+            READ ALL REGULATORY DISCLOSURES BEFORE
+          </p>
+        </div>
+      </section>
+    </footer>
     <a class="scroll-top" href="#" aria-label="Back to top"
       ><img src="./assets/icons/arrow-top.svg" alt=""
     /></a>

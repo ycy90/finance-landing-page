@@ -9,18 +9,13 @@
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   margin: 0;
-  
 }
 
 /* ===== VARIABLES ===== */
 
 :root {
-
   /* ===== COLOR ===== */
 
   --color-bg-primary: #051329;
@@ -42,7 +37,7 @@ p {
   --fs-caption: 0.75rem; /* 12px */
   --fs-sm: 0.875rem; /* 14px */
   --fs-base: clamp(0.875rem, 2.5vw, 1.2rem); /* 16px */
-  --fs-md: clamp(1.14rem, 2.5vw, 1.50rem); /* 18.5px~ */
+  --fs-md: clamp(1.14rem, 2.5vw, 1.5rem); /* 18.5px~ */
   --fs-lg: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px */
   --fs-xl: clamp(1.5rem, 2.5vw, 2rem); /* 24px */
   --fs-2xl: clamp(2rem, 2.5vw, 4rem); /* 32px */
@@ -51,7 +46,7 @@ p {
 
   /* ===== LAYOUT-VALUES ===== */
 
-  --desktop-width: 100rem; /* 1440px */
+  --desktop-width: 90rem; /* 1440px */
   --navbar-logo-width: 14rem; /* 224px */
 
   /* ===== FONT-WEIGHT ===== */
@@ -94,6 +89,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  position: relative;
+}
+
 a {
   text-decoration: none;
 }
@@ -104,26 +103,24 @@ img {
   height: auto;
 }
 
-
-/* I found visually hidden solution online, 
-didnt quite understand the logic behind it, to be honest */
+/* I found visually hidden solution online. */
 
 .visually-hidden {
   position: absolute;
   width: 1px;
-  height: 1px;     
+  height: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-  
 }
 
 /* ===== LAYOUT ===== */
 
 .container {
+  width: 100%;
   max-width: var(--desktop-width);
   margin-inline: auto;
   padding-inline: var(--space-lg);
@@ -140,6 +137,10 @@ didnt quite understand the logic behind it, to be honest */
     background-color 150ms ease,
     transform 150ms ease;
   text-align: center;
+  display: inline-block;
+}
+
+.btn--full-width {
   width: 100%;
 }
 
@@ -162,8 +163,9 @@ didnt quite understand the logic behind it, to be honest */
 
 .btn--primary:focus-visible,
 .btn--secondary:focus-visible,
-.navbar__menu-toggle:focus-visible, 
+.navbar__menu-toggle:focus-visible,     
 .navbar__item-link:focus-visible,
+.navbar__item-link--mobile:focus-visible,
 .navbar__logo-link:focus-visible,
 .subscription__form-item input:focus-visible,
 .subscription__form-item select:focus-visible,
@@ -173,21 +175,10 @@ didnt quite understand the logic behind it, to be honest */
 .subscription__form-checkbox a:focus-visible,
 .footer-navigation__link:focus-visible,
 .footer-navigation__connection-icon:focus-visible,
-.scroll-top:focus-visible  {
+.scroll-top:focus-visible {
   outline: 2px solid var(--color-gold-selected);
   outline-offset: 4px;
   border-radius: var(--br-base);
-}
-
-
-.pricing__card:nth-child(3) .btn {
-  color: var(--color-text-secondary);
-  background-color: var(--color-gold-selected);
-}
-
-.pricing__card:nth-child(3) .btn:hover {
-  color: var(--color-text-secondary);
-  background-color: var(--color-secondary-shade);
 }
 
 .chevron-rotate {
@@ -195,7 +186,7 @@ didnt quite understand the logic behind it, to be honest */
 }
 
 .questions__item[open] .chevron-rotate {
-  transform: rotate(180deg);  
+  transform: rotate(180deg);
 }
 /* ===== NAVIGATION ===== */
 
@@ -203,13 +194,75 @@ didnt quite understand the logic behind it, to be honest */
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-block: var(--space-lg);
+  padding-block: var(--space-base);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--color-bg-primary);
 }
 
 .navbar__menu-toggle {
+  position: relative;
+}
+
+.navbar__menu-toggle-icon {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.navbar__items--mobile {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  list-style-type: none;
+  padding: var(--space-2xl) var(--space-lg);
+  border-radius: var(--br-lg);
+  width: calc(70vw - 2rem);
+  height: 60dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+  z-index: 1;
+}
+
+.navbar__item--mobile {
+  width: 100%;
+}
+
+.navbar__item-link--mobile {
+  display: block;
+  width: 100%;
+  padding-block: var(--space-sm);
+  border-radius: var(--br-lg);
+  text-align: center;
+}
+
+.navbar__item--mobile:hover {
+  outline: 1px solid var(--color-accent);
+  border-radius: var(--br-lg);
+  color: var(--color-accent);
+}
+
+.navbar__item-link--mobile:hover {
+  color: var(--color-accent);
+  outline: 1px solid var(--color-accent);
+  display: block;
+  width: 100%;
+}
+
+.navbar__item-link--mobile:visited {
+  color: var(--color-text-accent);
+}
+
+.navbar__button--mobile {
+  width: 100%;
+  text-align: center;
 }
 
 .navbar__menu-icon {
@@ -222,7 +275,7 @@ didnt quite understand the logic behind it, to be honest */
   height: auto;
 }
 
-.navbar__items {
+.navbar__items--hidden {
   display: none;
 }
 
@@ -238,6 +291,7 @@ didnt quite understand the logic behind it, to be honest */
   flex-direction: column;
   justify-content: space-between;
   gap: var(--space-2xl);
+  margin-block: var(--space-2xl);
 }
 
 .hero__content {
@@ -352,7 +406,7 @@ didnt quite understand the logic behind it, to be honest */
   background-color: var(--color-bg-secondary);
 }
 
-.trust__container {
+.trust__media-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -515,14 +569,24 @@ didnt quite understand the logic behind it, to be honest */
   margin-bottom: var(--space-xl);
 }
 
-.pricing__card:nth-child(3) {
+.pricing__card--highlighted {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--color-gold-selected);
 }
 
-.pricing__card:nth-child(3) .pricing__type {
+.pricing__card--highlighted .pricing__type {
   color: var(--color-gold-selected);
+}
+
+.pricing__card--highlighted .btn {
+  color: var(--color-text-secondary);
+  background-color: var(--color-gold-selected);
+}
+
+.pricing__card--highlighted .btn:hover {
+  color: var(--color-text-secondary);
+  background-color: var(--color-secondary-shade);
 }
 
 .pricing__best-value-badge {
@@ -551,7 +615,7 @@ didnt quite understand the logic behind it, to be honest */
 }
 
 .subscription__content {
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: var(--space-lg);
 }
@@ -561,7 +625,6 @@ didnt quite understand the logic behind it, to be honest */
 }
 
 .subscription__form {
-
   display: flex;
   flex-direction: column;
   gap: var(--space-base);
@@ -579,21 +642,20 @@ didnt quite understand the logic behind it, to be honest */
   color: var(--color-text-muted);
 }
 
-.subscription__form-item input, .subscription__form-item select {
+.subscription__form-item input,
+.subscription__form-item select {
   background-color: var(--color-bg-secondary);
- padding-block: var(--space-base);
- padding-left: var(--space-base);
- color: var(--color-text-primary);
- border: none;
- border-radius: var(--br-base);
-
+  padding-block: var(--space-base);
+  padding-left: var(--space-base);
+  color: var(--color-text-primary);
+  border: none;
+  border-radius: var(--br-base);
 }
 
 .subscription__form-item select option {
   background-color: var(--color-bg-secondary);
   color: var(--color-text-muted);
 }
-
 
 /* ===== FAQS ===== */
 
@@ -621,13 +683,13 @@ didnt quite understand the logic behind it, to be honest */
 }
 
 .questions__item {
- border: 1px solid var(--color-primary);
- background-color: var(--color-primary);
- border-radius: var(--br-base);
- display: flex;
- flex-direction: column;
- gap: var(--space-xl);
- padding: var(--space-base);
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  border-radius: var(--br-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding: var(--space-base);
 }
 
 .questions__title {
@@ -659,7 +721,7 @@ didnt quite understand the logic behind it, to be honest */
   display: flex;
   flex-direction: column;
   gap: var(--space-base);
-   color: var(--color-text-muted);
+  color: var(--color-text-muted);
   text-align: center;
   font-size: var(--fs-caption);
 }
@@ -676,25 +738,24 @@ didnt quite understand the logic behind it, to be honest */
 }
 
 .newsletter__form input {
-  grid-column: 1/ span 4;
+  grid-column: 1 / span 4;
   background-color: var(--color-bg-primary);
-border: 1px solid var(--color-text-muted);
-padding-left: var(--space-base);
-border-radius: var(--br-base);
-color: var(--color-text-primary);
+  border: 1px solid var(--color-text-muted);
+  padding-left: var(--space-base);
+  border-radius: var(--br-base);
+  color: var(--color-text-primary);
 }
 
 /* ===== FOOTER - NAVIGATION ===== */
 
-
 footer {
-   background-color: var(--color-bg-secondary);
-   display: flex;
-   flex-direction: column;
-   gap: var(--space-base);
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-base);
 }
 
-.footer-navigation__container { 
+.footer-navigation__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: var(--space-base);
@@ -727,8 +788,7 @@ footer {
   list-style-type: none;
   justify-content: flex-start;
   gap: var(--space-base);
-  padding-left: 0;
-
+  padding: 0;
 }
 
 .footer-navigation__group {
@@ -749,11 +809,10 @@ footer {
 }
 
 .footer-navigation__item {
-font-size: var(--fs-base);
+  font-size: var(--fs-base);
 }
 
 .footer-navigation__link:visited {
-
   color: var(--color-text-muted);
 }
 
@@ -761,7 +820,7 @@ font-size: var(--fs-base);
 
 .footer-credentials__container {
   display: flex;
-  flex-direction: column;       
+  flex-direction: column;
   gap: var(--space-md);
   color: var(--color-text-muted);
   font-size: var(--fs-xxs);
@@ -789,4 +848,3 @@ font-size: var(--fs-base);
   background-color: var(--color-gold-hover);
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.2);
 }
-

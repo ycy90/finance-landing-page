@@ -45,7 +45,8 @@ No frameworks or libraries are used at this stage in order to strengthen my unde
 
 The current version of the project is available here:
 
-**[View Live Demo](https://ycy90.github.io/finance-landing-page/)**
+**[View Live Demo on Github Pages](https://ycy90.github.io/finance-landing-page/)**
+** [View Live Demo on Netlify] (https://equitasprivate.netlify.app/#)**
 
 The project is currently deployed as a static HTML/CSS website using GitHub Pages.
 
@@ -72,12 +73,13 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [x] At this stage, I’m adapting the completed sections for mobile first to make the responsive implementation more manageable.
 - [x] Completed Newsletter section HTML & CSS.
 - [x] Completed Footer section HTML.
+- [x] Completed the responsive implementation for major breakpoints.
+- [x] Refined and cleaned up the CSS.
+- [x] Removed unused and redundant CSS.
+- [x] Adapted the forms for Netlify Forms.
+- [x] Deployed the website to Netlify.
 
-  -[ ]The existing desktop styles are being preserved and will be refined after the mobile layout is established.
 
-- [ ] Build the rest of website structure with semantic HTML.
-- [ ] Style the rest of website using modern CSS.
-- [ ] Implement responsive layouts.
 - [ ] Optimize images and performance.
-- [ ] Deploy the static website using GitHub Pages. _(End of Phase 1: Static Website.)_
+- [ ] Refine responsive typography and font-sizes
 - [ ] Further improvements based on my bootcamp progress.
