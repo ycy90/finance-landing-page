@@ -34,16 +34,13 @@
 /* ===== HERO ===== */
 
 .hero__container {
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
 }
 
 .hero__trust-items {
-  flex-direction: row;;
+  flex-direction: row;
 }
-
 
 /* ===== FEATURES ===== */
 
@@ -55,8 +52,8 @@
 /* ===== TRUST ===== */
 
 .trust {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .trust__media-container {
@@ -70,10 +67,9 @@ grid-template-columns: repeat(3, 1fr);
 /* ===== PRICING ===== */
 
 .pricing__cards {
- grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 50px;
 }
-
 
 /* ===== SUBSCRIPTION ===== */
 
@@ -90,11 +86,9 @@ grid-template-columns: repeat(3, 1fr);
 /* ===== NEWSLETTER ===== */
 
 .newsletter__form input {
-grid-column: 2 / 4;
+  grid-column: 2 / 4;
 }
 
 .newsletter__form button {
-
-grid-column: 4 / 5;
+  grid-column: 4 / 5;
 }
-

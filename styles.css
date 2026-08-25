@@ -103,7 +103,7 @@ img {
   height: auto;
 }
 
-/* I found visually hidden solution online. */
+/* I found this visually hidden solution online. */
 
 .visually-hidden {
   position: absolute;
@@ -163,7 +163,7 @@ img {
 
 .btn--primary:focus-visible,
 .btn--secondary:focus-visible,
-.navbar__menu-toggle:focus-visible,     
+.navbar__menu-toggle:focus-visible,
 .navbar__item-link:focus-visible,
 .navbar__item-link--mobile:focus-visible,
 .navbar__logo-link:focus-visible,
@@ -241,6 +241,7 @@ img {
   padding-block: var(--space-sm);
   border-radius: var(--br-lg);
   text-align: center;
+  color: var(--color-text-primary);
 }
 
 .navbar__item--mobile:hover {
@@ -812,6 +813,11 @@ footer {
   font-size: var(--fs-base);
 }
 
+.footer-navigation__link {
+  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+}
+
 .footer-navigation__link:visited {
   color: var(--color-text-muted);
 }
@@ -823,7 +829,7 @@ footer {
   flex-direction: column;
   gap: var(--space-md);
   color: var(--color-text-muted);
-  font-size: var(--fs-xxs);
+  font-size: var(--fs-base);
   text-align: center;
   padding-inline: var(--space-2xl);
 }

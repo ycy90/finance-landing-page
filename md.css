@@ -3,33 +3,27 @@
 /* ===== FEATURES ===== */
 
 .features__grid {
-
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-base);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-base);
 }
 
 /* ===== PRICING ===== */
 
 .pricing__cards {
-    
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex: 1 1 calc((100% - 5rem) / 2);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1 1 calc((100% - 5rem) / 2);
 }
-
 
 /* ===== NEWSLETTE =====  */
 
 .newsletter__form input {
-grid-column: 2 / 4;
+  grid-column: 2 / 4;
 }
 
 .newsletter__form button {
-
-grid-column: 4 / 5;
+  grid-column: 4 / 5;
 }
 
-
 /* ===== FOOTER ===== */
-
