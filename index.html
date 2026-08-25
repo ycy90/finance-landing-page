@@ -21,6 +21,7 @@
       href="./md.css"
       media="all and (min-width: 620px) and (max-width: 1023.98px)"
     />
+
     <link
       rel="stylesheet"
       href="./lg.css"
@@ -59,7 +60,7 @@
                 <a class="navbar__item-link--mobile" href="#footer">About</a>
               </li>
               <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="#login">Login</a>
+                <a class="navbar__item-link--mobile" href="./login.html">Login</a>
               </li>
               <li class="navbar__button--mobile">
                 <a class="btn btn--primary" href="#subscription">Get Started</a>
@@ -88,7 +89,7 @@
               <a class="navbar__item-link" href="#footer">About</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__item-link" href="#login">Login</a>
+              <a class="navbar__item-link" href="./login.html">Login</a>
             </li>
             <li class="navbar__item">
               <a class="btn btn--primary" href="#subscription">Get Started</a>
@@ -431,6 +432,16 @@
                 autocomplete="email"
               />
             </div>
+             <div class="subscription__form-item">
+              <label for="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                autocomplete="current-password"
+              />
+            </div>
             <div class="subscription__form-item">
               <label for="phone">Phone Number </label>
               <input
@@ -451,6 +462,8 @@
                 required
               />
             </div>
+
+             
             <div class="subscription__form-item">
               <label for="goal">Investment Goal</label>
 
@@ -499,8 +512,9 @@
               >
             </div>
 
-            <button class="btn btn--primary" type="submit">Get Started</button>
+            <button class="btn btn--primary" type="submit">Sign Up</button>
           </form>
+          <p class="subscription__login">Already signed up? Click <a href="./login.html">here</a> to login.</p>
         </div>
       </section>
 
@@ -657,7 +671,7 @@
                 <a
                   href="https://x.com" target="_blank"
                   class="footer-navigation__connection-icon"
-                  aria-label="X"
+                aria-label="X - former Twitter"
                   ><img
                     src="
                     ./assets/logo/x-logo.svg"

@@ -26,7 +26,7 @@ p {
   --color-text-secondary: #000;
   --color-accent: #3dd1b4;
   --color-gold-hover: #d8ae5c;
-  --color-secondary-hover-muted: #d8af5ca9;
+  --color-gold-hover-muted: #d8af5ca9;
   --color-gold-selected: #e9c176;
   --color-text-muted: #b2b5be;
 
@@ -47,6 +47,7 @@ p {
   /* ===== LAYOUT-VALUES ===== */
 
   --desktop-width: 90rem; /* 1440px */
+  --loginscreen-width: 40rem;
   --navbar-logo-width: 14rem; /* 224px */
 
   /* ===== FONT-WEIGHT ===== */
@@ -175,8 +176,11 @@ img {
 .subscription__form-checkbox input:focus-visible,
 .subscription__form-checkbox a:focus-visible,
 .footer-navigation__link:focus-visible,
-.footer-navigation__connection-icon:focus-visible,
-.scroll-top:focus-visible {
+.footer-navigation__connection-item:focus-visible,
+.subscription__login a:focus-visible,
+.login__info input:focus-visible,
+.login__forget a:focus-visible, 
+.scroll:focus-visible {
   outline: 2px solid var(--color-gold-selected);
   outline-offset: var(--space-xs);
   border-radius: var(--br-base);
@@ -224,7 +228,7 @@ img {
   list-style-type: none;
   padding: var(--space-2xl) var(--space-lg);
   border-radius: var(--br-lg);
-  width: calc(70vw - 2rem);
+  width: calc(50vw - 2rem);
   height: 60dvh;
   display: flex;
   flex-direction: column;
@@ -247,7 +251,7 @@ img {
 }
 
 .navbar__item--mobile:hover {
-  outline: 1px solid var(--color-accent);
+  background-color: var(--color-accent);
   border-radius: var(--br-lg);
   color: var(--color-accent);
 }
@@ -260,7 +264,7 @@ img {
 }
 
 .navbar__item-link--mobile:visited {
-  color: var(--color-text-accent);
+  color: var(--color-text-primary);
 }
 
 .navbar__button--mobile {
@@ -295,6 +299,7 @@ img {
   justify-content: space-between;
   gap: var(--space-2xl);
   margin-block: var(--space-2xl);
+  padding-top: var(--space-2xl);
 }
 
 .hero__content {
@@ -351,6 +356,9 @@ img {
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
 }
+
+
+
 
 /* ===== FEATURES ===== */
 
@@ -589,7 +597,7 @@ img {
 
 .pricing__card--highlighted .btn:hover {
   color: var(--color-text-secondary);
-  background-color: var(--color-secondary-hover-muted);
+  background-color: var(--color-gold-hover-muted);
 }
 
 .pricing__best-value-badge {
@@ -663,6 +671,11 @@ img {
 .subscription__form-checkbox a {
   color: var(--color-accent);
 } 
+
+.subscription__login {
+  text-align: center;
+  font-size: var(--fs-caption);
+}
 
 /* ===== FAQS ===== */
 
@@ -833,7 +846,6 @@ footer {
 
 .footer__location iframe {
   width: 100%;
-  height: auto;
   border-radius: var(--br-lg);
 }
 
@@ -851,7 +863,7 @@ footer {
 
 /* ===== UTILITY ===== */
 
-.scroll-top {
+.scroll {
   border-radius: var(--br-base);
   color: var(--color-text-secondary);
   background-color: var(--color-accent);
@@ -865,7 +877,45 @@ footer {
     transform 150ms ease;
 }
 
-.scroll-top:hover {
+.scroll:hover {
   background-color: var(--color-gold-hover);
   box-shadow: 0 var(--space-sm) var(--space-base) rgb(0 0 0 / 0.2);
+}
+
+
+/* ===== LOGIN SCREEN ======  */
+
+
+.login__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-base);
+  max-width: var(--loginscreen-width);
+  margin: 50dvh auto;
+  padding-inline: var(--space-2xl);
+}
+  
+.login__info {
+color: var(--color-text-primary);
+display: flex;
+flex-direction: column;
+gap: var(--space-md);
+}
+
+.login__info input {
+  padding-block: var(--space-md);
+}
+
+.login__forget {
+  color: var(--color-text-muted);
+}
+
+.login__forget a {
+  color: var(--color-accent);
+}
+
+.login__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-base);
 }
