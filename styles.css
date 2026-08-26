@@ -673,6 +673,10 @@ img {
   font-size: var(--fs-caption);
 }
 
+.subscription__login a {
+  color: var(--color-accent);
+}
+
 /* ===== FAQS ===== */
 
 .questions {
@@ -860,6 +864,7 @@ footer {
 /* ===== UTILITY ===== */
 
 .scroll {
+  
   border-radius: var(--br-base);
   color: var(--color-text-secondary);
   background-color: var(--color-accent);
@@ -871,6 +876,11 @@ footer {
   transition:
     background-color 150ms ease,
     transform 150ms ease;
+}
+
+.scroll-image {
+width: 60px; 
+height: 60px;
 }
 
 .scroll:hover {
