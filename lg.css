@@ -46,7 +46,11 @@
   grid-column: 6 / -1;
 }
 
-.hero__trust-items {
+.hero__trust-item {
+  flex-direction: row;
+}
+
+.hero__trust {
   flex-direction: row;
 }
 
@@ -81,7 +85,7 @@
 
 /* ===== SUBSCRIPTION ===== */
 
-.subscription {
+#subscription {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }

@@ -1,3 +1,5 @@
+/* ===== MOBILE DESIGN - MOBILE FIRST ===== */
+
 /* ===== RESET ===== */
 
 *,
@@ -32,22 +34,22 @@ p {
 
   /* ===== FONT-SIZE ===== */
 
-  --fs-xxs: 0.3rem;
+  --fs-xxs: 0.3rem; /* 4.8px */
   --fs-xs: 0.5rem; /* 8px */
   --fs-caption: 0.75rem; /* 12px */
   --fs-sm: 0.875rem; /* 14px */
-  --fs-base: clamp(0.875rem, 2.5vw, 1.1rem); /* 16px */
-  --fs-md: clamp(1.14rem, 2.5vw, 1.5rem); /* 18.5px~ */
-  --fs-lg: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px */
-  --fs-xl: clamp(1.5rem, 2.5vw, 2rem); /* 24px */
-  --fs-2xl: clamp(2rem, 2.5vw, 4rem); /* 32px */
-  --fs-3xl: clamp(3rem, 2.5vw, 4.5rem); /* 48px */
-  --fs-hero: clamp(4rem, 2.5vw, 5rem); /* 64px */
+  --fs-base: clamp(0.875rem, 2.5vw, 1.1rem); /* 14px–17.6px */
+  --fs-md: clamp(1.14rem, 2.5vw, 1.5rem); /* 18.24px–24px */
+  --fs-lg: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px–28px */
+  --fs-xl: clamp(1.5rem, 2.5vw, 2rem); /* 24px–32px */
+  --fs-2xl: clamp(2rem, 2.5vw, 4rem); /* 32px–64px */
+  --fs-3xl: clamp(3rem, 2.5vw, 4.5rem); /* 48px–72px */
+  --fs-hero: clamp(4rem, 2.5vw, 5rem); /* 64px–80px */
 
   /* ===== LAYOUT-VALUES ===== */
 
   --desktop-width: 90rem; /* 1440px */
-  --loginscreen-width: 40rem;
+  --loginscreen-width: 40rem; /* 640px */
   --navbar-logo-width: 14rem; /* 224px */
 
   /* ===== FONT-WEIGHT ===== */
@@ -56,6 +58,7 @@ p {
   --fw-md: 500;
   --fw-sb: 600;
   --fw-bold: 700;
+  --fw-bolder: 800;
 
   /* BORDER-RADIUS */
 
@@ -176,7 +179,7 @@ img {
 .subscription__form-checkbox input:focus-visible,
 .subscription__form-checkbox a:focus-visible,
 .footer-navigation__link:focus-visible,
-.footer-navigation__connection-item:focus-visible,
+.footer-navigation__connection-icon:focus-visible,
 .subscription__login a:focus-visible,
 .login__info input:focus-visible,
 .login__forget a:focus-visible,
@@ -216,6 +219,7 @@ img {
   background: none;
   border: none;
   cursor: pointer;
+  list-style-type: none;
 }
 
 .navbar__items--mobile {
@@ -281,7 +285,7 @@ img {
   height: auto;
 }
 
-.navbar__items--hidden {
+.mobile--hidden {
   display: none;
 }
 
@@ -309,6 +313,7 @@ img {
 .hero__kicker {
   font-size: var(--fs-sm);
   color: var(--color-accent);
+  font-weight: var(--fw-reg);
 }
 
 .hero__title {
@@ -319,12 +324,14 @@ img {
 
 .hero__accent {
   color: var(--color-accent);
+  font-weight: var(--fw-bolder);
 }
 
 .hero__description {
   color: var(--color-text-muted);
   font-size: var(--fs-base);
   line-height: 1.6;
+  font-weight: var(--fw-sb);
 }
 
 .hero__buttons {
@@ -333,7 +340,7 @@ img {
   gap: var(--space-base);
 }
 
-.hero__trust-items {
+.hero__trust {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -354,6 +361,7 @@ img {
 .hero__trust-text {
   color: var(--color-text-muted);
   font-size: var(--fs-sm);
+  font-weight: var(--fw-sb);
 }
 
 /* ===== FEATURES ===== */
@@ -375,6 +383,7 @@ img {
 .features__heading {
   color: var(--color-text-primary);
   font-size: var(--fs-xl);
+  font-weight: var(--fw-bolder);
 }
 
 .features__heading::after {
@@ -400,11 +409,13 @@ img {
 .features__title {
   font-size: var(--fs-lg);
   color: var(--color-text-primary);
+  font-weight: var(--fw-sb);
 }
 
 .features__description {
   font-size: var(--fs-sm);
   color: var(--color-text-muted);
+  font-weight: var(--fw-sb);
 }
 
 /* ===== TRUST SECTION ===== */
@@ -436,10 +447,12 @@ img {
 
 .trust__experience-value {
   font-size: var(--fs-xl);
+  font-weight: var(--fw-sb);
 }
 
 .trust__experience-text {
   font-size: var(--fs-caption);
+  font-weight: var(--fw-sb);
 }
 
 .trust__content {
@@ -459,11 +472,13 @@ img {
 .trust__kicker {
   color: var(--color-accent);
   font-size: var(--fs-caption);
+  font-weight: var(--fw-sb);
 }
 
 .trust__heading {
   color: var(--color-text-primary);
   font-size: var(--fs-2xl);
+  font-weight: var(--fw-bolder);
 }
 
 .trust__description {
@@ -514,6 +529,7 @@ img {
 .pricing__title {
   color: var(--color-text-primary);
   font-size: var(--fs-2xl);
+  font-weight: var(--fw-bolder);
 }
 
 .pricing__subtitle {
@@ -521,6 +537,7 @@ img {
   font-size: var(--fs-sm);
   padding-inline: var(--space-lg);
   text-align: center;
+  font-weight: var(--fw-sb);
 }
 
 .pricing__cards {
@@ -551,10 +568,12 @@ img {
 
 .pricing__type {
   font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
 }
 
 .pricing__price {
   font-size: var(--fs-2xl);
+  font-weight: var(--fw-sb);
 }
 
 .fs--sm {
@@ -629,6 +648,7 @@ img {
 
 .subscription__heading {
   font-size: var(--fs-2xl);
+  font-weight: var(--fw-bolder);
 }
 
 .subscription__form {
@@ -693,7 +713,8 @@ img {
 .questions__heading {
   color: var(--color-text-primary);
   text-align: center;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
 }
 
 .questions__list {
@@ -703,7 +724,6 @@ img {
 }
 
 .questions__item {
-  border: 1px solid var(--color-primary);
   background-color: var(--color-primary);
   border-radius: var(--br-base);
   display: flex;
@@ -721,6 +741,7 @@ img {
   justify-content: space-between;
   cursor: pointer;
   padding-block: var(--space-base) 0;
+  font-weight: var(--fw-bold);
 }
 
 .questions__description {
@@ -749,6 +770,12 @@ img {
 .newsletter__title {
   color: var(--color-text-primary);
   text-align: center;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+
+.newsletter__description {
+  font-size: var(--fs-base);
 }
 
 .newsletter__form {
@@ -856,15 +883,23 @@ footer {
   flex-direction: column;
   gap: var(--space-md);
   color: var(--color-text-muted);
-  font-size: var(--fs-base);
   text-align: center;
   padding: var(--space-2xl) var(--space-2xl);
+}
+
+.credentials__description {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-reg);
+}
+
+.credentials__disclaimer {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-reg);
 }
 
 /* ===== UTILITY ===== */
 
 .scroll {
-  
   border-radius: var(--br-base);
   color: var(--color-text-secondary);
   background-color: var(--color-accent);
@@ -879,8 +914,8 @@ footer {
 }
 
 .scroll-image {
-width: 60px; 
-height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .scroll:hover {
@@ -895,7 +930,7 @@ height: 60px;
   flex-direction: column;
   gap: var(--space-base);
   max-width: var(--loginscreen-width);
-  margin: 50dvh auto;
+  margin: 35dvh auto;
   padding-inline: var(--space-2xl);
 }
 

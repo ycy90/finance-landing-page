@@ -29,8 +29,8 @@
     />
   </head>
   <body>
-<header>
-  <div class="container">
+    <header>
+      <div class="container">
         <nav class="navbar">
           <details class="navbar__menu-toggle desktop--hidden">
             <summary
@@ -46,24 +46,38 @@
             </summary>
             <ul class="navbar__items--mobile">
               <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="./index.html#insights"
+                <a
+                  class="navbar__item-link--mobile"
+                  href="./index.html#insights"
                   >Insights</a
                 >
               </li>
               <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="./index.html#pricing">Pricing</a>
+                <a class="navbar__item-link--mobile" href="./index.html#pricing"
+                  >Pricing</a
+                >
               </li>
               <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="./index.html#questions">FAQS</a>
+                <a
+                  class="navbar__item-link--mobile"
+                  href="./index.html#questions"
+                  >FAQS</a
+                >
               </li>
               <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="./index.html#footer">About</a>
+                <a class="navbar__item-link--mobile" href="./index.html#footer"
+                  >About</a
+                >
               </li>
               <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="./login.html">Login</a>
+                <a class="navbar__item-link--mobile" href="./login.html"
+                  >Login</a
+                >
               </li>
               <li class="navbar__button--mobile">
-                <a class="btn btn--primary" href="./index.html#subscription">Get Started</a>
+                <a class="btn btn--primary" href="./index.html#subscription"
+                  >Get Started</a
+                >
               </li>
             </ul>
           </details>
@@ -75,68 +89,75 @@
               class="navbar__logo"
           /></a>
 
-          <ul class="navbar__items navbar__items--hidden">
-            <li class="navbar__item">
-              <a class="navbar__item-link" href="./index.html#insights">Insights</a>
+          <ul class="navbar__items mobile--hidden">
+            <li>
+              <a class="navbar__item-link" href="./index.html#insights"
+                >Insights</a
+              >
             </li>
-            <li class="navbar__item">
-              <a class="navbar__item-link" href="./index.html#pricing">Pricing</a>
+            <li>
+              <a class="navbar__item-link" href="./index.html#pricing"
+                >Pricing</a
+              >
             </li>
-            <li class="navbar__item">
-              <a class="navbar__item-link" href="./index.html#questions">FAQS</a>
+            <li>
+              <a class="navbar__item-link" href="./index.html#questions"
+                >FAQS</a
+              >
             </li>
-            <li class="navbar__item">
+            <li>
               <a class="navbar__item-link" href="./index.html#footer">About</a>
             </li>
-            <li class="navbar__item">
+            <li>
               <a class="navbar__item-link" href="./login.html">Login</a>
             </li>
-            <li class="navbar__item">
-              <a class="btn btn--primary" href="./index.html#subscription">Get Started</a>
+            <li>
+              <a class="btn btn--primary" href="./index.html#subscription"
+                >Get Started</a
+              >
             </li>
           </ul>
         </nav>
       </div>
-</header>
-  
+    </header>
+
     <main>
-      <section>
-        <form class="login__container" name="login" method="POST">
-             <div class="login__info">
-              <label for="login-email">Email Address </label>
-              <input
-                id="login-email"
-                name="login-email"
-                type="email"
-                placeholder="e.g john.doe@gmail.com"
-                required
-                autocomplete="email"
-              />
-            </div>
-             <div class="login__info">
-              <label for="password">Password</label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                required
-                autocomplete="current-password"
-              />
-            </div>
-            <p class="login__forget">Forgot your password? Click <a href="./login.html">here</a></p>
-            <div class="login__buttons">
-            <button class="btn btn--primary" type="submit">Login</button>
-            <button class="btn btn--primary" type="reset">Reset</button>
-            </div>
-            
-        </form>
-      </section>
-</main>
-      <footer id="footer">
-      <nav class="footer-navigation">
+      <form class="login__container" name="login" method="POST">
+        <div class="login__info">
+          <label for="login-email">Email Address </label>
+          <input
+            id="login-email"
+            name="login-email"
+            type="email"
+            placeholder="e.g john.doe@gmail.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <div class="login__info">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            autocomplete="current-password"
+          />
+        </div>
+        <p class="login__forget">
+          Forgot your password? Click <a href="./login.html">here</a>
+        </p>
+        <div class="login__buttons">
+          <button class="btn btn--primary" type="submit">Login</button>
+          <button class="btn btn--primary" type="reset">Reset</button>
+        </div>
+      </form>
+    </main>
+    <footer id="footer">
+      <nav>
         <div class="footer-navigation__container container">
           <div class="footer-navigation__logo-media">
-            <a href="./index.html" class="footer-navigation__logo"
+            <a href="./index.html"
               ><img
                 src="./assets/logo/logo.svg"
                 alt="Equitas Private"
@@ -147,9 +168,10 @@
             </p>
 
             <ul class="footer-navigation__connection">
-              <li class="footer-navigation__connection-item">
+              <li>
                 <a
-                  href="https://www.facebook.com" target="_blank"
+                  href="https://www.facebook.com"
+                  target="_blank"
                   class="footer-navigation__connection-icon"
                   aria-label="Facebook"
                   ><img
@@ -158,11 +180,12 @@
                     aria-hidden="true"
                 /></a>
               </li>
-              <li class="footer-navigation__connection-item">
+              <li>
                 <a
-                  href="https://x.com" target="_blank"
+                  href="https://x.com"
+                  target="_blank"
                   class="footer-navigation__connection-icon"
-                aria-label="X - former Twitter"
+                  aria-label="X - former Twitter"
                   ><img
                     src="
                     ./assets/logo/x-logo.svg"
@@ -170,9 +193,10 @@
                     aria-hidden="true"
                 /></a>
               </li>
-              <li class="footer-navigation__connection-item">
+              <li>
                 <a
-                  href="https://www.linkedin.com" target="_blank"
+                  href="https://www.linkedin.com"
+                  target="_blank"
                   class="footer-navigation__connection-icon"
                   aria-label="Linkedin"
                   ><img
@@ -186,50 +210,73 @@
           <div class="footer-navigation__group">
             <h3 class="footer-navigation__title">Links</h3>
             <ul class="footer-navigation__list">
-               <li class="footer-navigation__item">
-                <a href="./documentation/terms_and_conditions.pdf" target="_blank" class="footer-navigation__link"
-                  >Terms and Conditions</a
-                ></li>
-               <li class="footer-navigation__item">
-                <a href="./documentation/privacy-policy.pdf" target="_blank" class="footer-navigation__link"
-                  >Privacy Policy</a
-                ></li>
-                   
               <li class="footer-navigation__item">
-                <a href="./documentation/disclaimer-and-disclosure.pdf" target="_blank" class="footer-navigation__link"
+                <a
+                  href="./documentation/terms_and_conditions.pdf"
+                  target="_blank"
+                  class="footer-navigation__link"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li class="footer-navigation__item">
+                <a
+                  href="./documentation/privacy-policy.pdf"
+                  target="_blank"
+                  class="footer-navigation__link"
+                  >Privacy Policy</a
+                >
+              </li>
+
+              <li class="footer-navigation__item">
+                <a
+                  href="./documentation/disclaimer-and-disclosure.pdf"
+                  target="_blank"
+                  class="footer-navigation__link"
                   >Disclosures</a
-                ></li>
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-navigation__group">
             <h3 class="footer-navigation__title">Navigation</h3>
             <ul class="footer-navigation__list">
-               <li class="footer-navigation__item">
+              <li class="footer-navigation__item">
                 <a href="./index.html#features" class="footer-navigation__link"
                   >Features</a
                 >
               </li>
-               <li class="footer-navigation__item">
+              <li class="footer-navigation__item">
                 <a href="./index.html#pricing" class="footer-navigation__link"
                   >Pricing</a
-                ></li>
-                     <li class="footer-navigation__item">
+                >
+              </li>
+              <li class="footer-navigation__item">
                 <a href="./index.html#questions" class="footer-navigation__link"
                   >FAQ</a
-                ></li>
+                >
+              </li>
               <li class="footer-navigation__item">
-                <a href="mailto:info@equitasprivate.com" class="footer-navigation__link"
+                <a
+                  href="mailto:info@equitasprivate.com"
+                  class="footer-navigation__link"
                   >Contact Us</a
-                ></li>
+                >
+              </li>
             </ul>
           </div>
-          <div class="footer__location" >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38471.17101423431!2d73.40237218300614!3d-53.036084808980746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb306ad003a17c605%3A0x8517ae38f21c5569!2sAtlas%20Cove%20Station%20remains!5e0!3m2!1str!2sde!4v1787654956893!5m2!1str!2sde"  allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" aria-label="Equitas Private Banking Location on Google Maps"></iframe>
+          <div class="footer__location">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38471.17101423431!2d73.40237218300614!3d-53.036084808980746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb306ad003a17c605%3A0x8517ae38f21c5569!2sAtlas%20Cove%20Station%20remains!5e0!3m2!1str!2sde!4v1787654956893!5m2!1str!2sde"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              aria-label="Equitas Private Banking Location on Google Maps"
+            ></iframe>
           </div>
         </div>
       </nav>
 
-      <section class="credentials">
+      <section>
         <div class="credentials__container">
           <p class="credentials__description">
             © 2024 Equitas Private Banking. All rights reserved. Member
@@ -243,9 +290,9 @@
         </div>
       </section>
     </footer>
-    
 
-     <a class="scroll" href="./index.html" aria-label="Back to Homepage"
+    <a class="scroll" href="./index.html" aria-label="Back to Homepage"
       ><img src="./assets/icons/arrow-left.svg" alt="" class="scroll-image"
     /></a>
   </body>
+</html>
