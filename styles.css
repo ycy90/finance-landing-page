@@ -942,7 +942,12 @@ footer {
 }
 
 .login__info input {
-  padding-block: var(--space-md);
+   background-color: var(--color-bg-secondary);
+  padding-block: var(--space-base);
+  padding-left: var(--space-base);
+  color: var(--color-text-primary);
+  border: none;
+  border-radius: var(--br-base);
 }
 
 .login__forget {
