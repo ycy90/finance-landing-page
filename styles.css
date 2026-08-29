@@ -11,6 +11,7 @@
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
@@ -180,6 +181,7 @@ img {
 .subscription__form-checkbox a:focus-visible,
 .footer-navigation__link:focus-visible,
 .footer-navigation__connection-icon:focus-visible,
+.address__info a:focus-visible,
 .subscription__login a:focus-visible,
 .login__info input:focus-visible,
 .login__forget a:focus-visible,
@@ -874,6 +876,30 @@ footer {
 .footer__location iframe {
   width: 100%;
   border-radius: var(--br-lg);
+}
+
+.address__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  color: var(--color-text-muted);
+}
+
+.address__title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bolder);
+}
+
+.address__info {
+  font-weight: var(--fw-sb);
+}
+
+.address__info a {
+  color: var(--color-text-primary);
+}
+
+.address__info a:hover {
+  color: var(--color-accent);
 }
 
 /* ===== FOOTER - CREDENTIALS ===== */
