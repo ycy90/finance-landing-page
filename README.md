@@ -41,12 +41,12 @@ No frameworks or libraries are used at this stage in order to strengthen my unde
 - Image optimization
 - GitHub Pages deployment
 
-## Deployment - Live Demo
+## Deployment - Finished Project
 
-The current version of the project is available here:
+The final version of the project is available here:
 
-**[View Live Demo on Github Pages](https://ycy90.github.io/finance-landing-page/)**
-** [View Live Demo on Netlify] (https://equitasprivate.netlify.app/#)**
+**[View Finished Project on Github Pages](https://ycy90.github.io/finance-landing-page/)**
+** [View Finished Project on Netlify] (https://finance-landing-page-project.netlify.app/)**
 
 The project is currently deployed as a static HTML/CSS website using GitHub Pages.
 
@@ -78,8 +78,7 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [x] Removed unused and redundant CSS.
 - [x] Adapted the forms for Netlify Forms.
 - [x] Deployed the website to Netlify.
-
-
-- [ ] Optimize images and performance.
-- [ ] Refine responsive typography and font-sizes
-- [ ] Further improvements based on my bootcamp progress.
+- [x] Optimize images and performance.
+- [x] Refine responsive typography and font-sizes
+- [x] Further improvements based on my bootcamp progress.
+- [x] Project deployed on August 30th, 2026 on both github pages and netlify. 
