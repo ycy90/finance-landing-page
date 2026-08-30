@@ -51,7 +51,7 @@ p {
 
   --desktop-width: 90rem; /* 1440px */
   --loginscreen-width: 40rem; /* 640px */
-  --navbar-logo-width: 14rem; /* 224px */
+  --navbar-logo-width: 10rem; /* 160px */
 
   /* ===== FONT-WEIGHT ===== */
 
@@ -804,6 +804,11 @@ footer {
   gap: var(--space-base);
 }
 
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-navigation__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -883,6 +888,7 @@ footer {
   flex-direction: column;
   gap: var(--space-sm);
   color: var(--color-text-muted);
+  padding-inline: var(--space-xl);
 }
 
 .address__title {
@@ -957,7 +963,9 @@ footer {
   gap: var(--space-base);
   max-width: var(--loginscreen-width);
   margin: 35dvh auto;
-  padding-inline: var(--space-2xl);
+  border: 5px solid var(--color-accent);
+  padding: var(--space-2xl) var(--space-3xl);
+  border-radius: var(--br-3xl);
 }
 
 .login__info {
