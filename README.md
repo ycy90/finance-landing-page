@@ -89,4 +89,3 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [ ] Optimize images and performance.
 - [ ] Refine responsive typography and font-sizes
 - [ ] Further improvements based on my bootcamp progress.
->>>>>>> 14c7fad (Refactor navbar: replace details/summary menu with JavaScript toggle for improved functionality)
