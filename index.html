@@ -37,9 +37,14 @@
     <header>
       <div class="container">
         <nav class="navbar">
-          <details class="navbar__menu-toggle desktop--hidden">
-            <summary
-              class="navbar__menu-toggle-icon"
+          <a href="#" class="navbar__logo-link"
+            ><img
+              src="./assets/logo/logo.svg"
+              alt="Equitas Logo"
+              class="navbar__logo"
+          /></a>
+            <div
+            id="toggle" class="navbar__menu-toggle-icon desktop--hidden navbar__menu-toggle"
               aria-label="Open navigation menu"
             >
               <img
@@ -47,58 +52,25 @@
                 alt=""
                 class="navbar__menu-icon"
                 aria-hidden="true"
-              />
-            </summary>
-            <ul class="navbar__items--mobile">
-              <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="#insights"
-                  >Insights</a
-                >
-              </li>
-              <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="#pricing">Pricing</a>
-              </li>
-              <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="#questions">FAQS</a>
-              </li>
-              <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="#footer">About</a>
-              </li>
-              <li class="navbar__item--mobile">
-                <a class="navbar__item-link--mobile" href="./login.html"
-                  >Login</a
-                >
-              </li>
-              <li class="navbar__button--mobile">
-                <a class="btn btn--primary" href="#subscription">Get Started</a>
-              </li>
-            </ul>
-          </details>
+              /></div>
 
-          <a href="#" class="navbar__logo-link"
-            ><img
-              src="./assets/logo/logo.svg"
-              alt="Equitas Logo"
-              class="navbar__logo"
-          /></a>
-
-          <ul class="navbar__items mobile--hidden">
-            <li>
-              <a class="navbar__item-link" href="#insights">Insights</a>
+          <ul class="navbar__items mobile--hidden navbar__items--mobile">
+            <li class="navbar__item--mobile">
+              <a class="navbar__item-link navbar__item-link--mobile" href="#insights">Insights</a>
             </li>
-            <li>
-              <a class="navbar__item-link" href="#pricing">Pricing</a>
+            <li class="navbar__item--mobile">
+              <a class="navbar__item-link navbar__item-link--mobile" href="#pricing">Pricing</a>
             </li>
-            <li>
-              <a class="navbar__item-link" href="#questions">FAQS</a>
+            <li class="navbar__item--mobile">
+              <a class="navbar__item-link navbar__item-link--mobile" href="#questions">FAQS</a>
             </li>
-            <li>
-              <a class="navbar__item-link" href="#footer">About</a>
+            <li class="navbar__item--mobile">
+              <a class="navbar__item-link navbar__item-link--mobile" href="#footer">About</a>
             </li>
-            <li>
-              <a class="navbar__item-link" href="./login.html">Login</a>
+            <li class="navbar__item--mobile">
+              <a class="navbar__item-link navbar__item-link--mobile" href="./login.html">Login</a>
             </li>
-            <li>
+            <li class="navbar__button--mobile">
               <a class="btn btn--primary" href="#subscription">Get Started</a>
             </li>
           </ul>
@@ -782,5 +754,6 @@
     <a class="scroll" href="#" aria-label="Back to top"
       ><img src="./assets/icons/arrow-top.svg" alt="" class="scroll-image"
     /></a>
+    <script src="index.js"></script>
   </body>
 </html>

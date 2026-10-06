@@ -78,7 +78,15 @@ This project will continue to evolve as I advance through my bootcamp, with new 
 - [x] Removed unused and redundant CSS.
 - [x] Adapted the forms for Netlify Forms.
 - [x] Deployed the website to Netlify.
+<<<<<<< HEAD
 - [x] Optimize images and performance.
 - [x] Refine responsive typography and font-sizes
 - [x] Further improvements based on my bootcamp progress.
 - [x] Project deployed on August 30th, 2026 on both github pages and netlify. 
+=======
+- [x] Replaced the previous `details`/`summary` hamburger menu implementation with a JavaScript-based toggle.
+
+- [ ] Optimize images and performance.
+- [ ] Refine responsive typography and font-sizes
+- [ ] Further improvements based on my bootcamp progress.
+>>>>>>> 14c7fad (Refactor navbar: replace details/summary menu with JavaScript toggle for improved functionality)
